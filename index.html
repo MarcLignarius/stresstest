@@ -6,53 +6,65 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Stress Test</title>
+  <title>Checkboxes Practice: Stress Test</title>
 </head>
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1>Stress Test</h1>
+      <h1>Checkboxes Practice: Stress Test</h1>
+      <em>Who needs WebMD?</em>
     </div>
-    <form id="health-survey">
+    <form id="healthSurvey">
       <div class="form-group">
-        <p>In the past week, have you experienced any of the following events?</p>
-        <input type="checkbox" name="stressful-events" value="toe">Stubbing a toe<br>
-        <input type="checkbox" name="stressful-events" value="netflix">Netflix cancelling your favorite show<br>
-        <input type="checkbox" name="stressful-events" value="cat">Your cat getting diarrhea<br>
-        <input type="checkbox" name="stressful-events" value="blazers">Your favorite team (The Blazers) losing a game<br>
-        <input type="checkbox" name="stressful-events" value="park">Having to park 3 blocks from your apartment.<br>
+        <p>In the past year, have you experienced any of the following events?</p>
+        <input type="checkbox" name="stressfulEvents" value="option1">Change in sleep habits.<br>
+        <input type="checkbox" name="stressfulEvents" value="option2">Change in residence.<br>
+        <input type="checkbox" name="stressfulEvents" value="option3">Change in responsibilities at work.<br>
+        <input type="checkbox" name="stressfulEvents" value="option4">Change in financial state.<br>
+        <input type="checkbox" name="stressfulEvents" value="option5">Change in frequency of arguments.<br>
       </div>
       <div class="form-group">
-        <p>In the past week, have you experienced any of the following symptoms?</p>
-        <input type="checkbox" name="symptoms" value="twitch">An eyebrow twitch<br>
-        <input type="checkbox" name="symptoms" value="pirate">Suddenly speaking in "pirate", saying "ARRR" often<br>
-        <input type="checkbox" name="symptoms" value="music">Smelling music<br>
-        <input type="checkbox" name="symptoms" value="puns">Making bad puns at inappropriate moments<br>
-        <input type="checkbox" name="symptoms" value="cheese">Eating a lot of cheese<br>
+        <p>In the past year, have you experienced any of the following symptoms?</p>
+        <input type="checkbox" name="symptoms" value="option1">Low energy.<br>
+        <input type="checkbox" name="symptoms" value="option2">Headaches.<br>
+        <input type="checkbox" name="symptoms" value="option3">Constipation.<br>
+        <input type="checkbox" name="symptoms" value="option4">Chest pain.<br>
+        <input type="checkbox" name="symptoms" value="option5">Insomnia.<br>
       </div>
       <div class="form-group">
-        <p>Which of these relief methods do you use?</p>
-        <input type="checkbox" name="stress-relievers" value="book">Reading a book<br>
-        <input type="checkbox" name="stress-relievers" value="meditating">Meditating<br>
-        <input type="checkbox" name="stress-relievers" value="amazon">Watching your show on Amazon instead of Netflix<br>
-        <input type="checkbox" name="stress-relievers" value="gym">Going to the gym<br>
-        <input type="checkbox" name="stress-relievers" value="bath">Taking a bath<br>
-        <input type="checkbox" name="stress-relievers" value="cat">Playing with your cat (after you have cleaned up its mess)<br>
-        <input type="checkbox" name="stress-relievers" value="plant">Growing some plants<br>
-        <input type="checkbox" name="stress-relievers" value="write">Writing<br>
-        <input type="checkbox" name="stress-relievers" value="nap">Taking a nap<br>
-        <input type="checkbox" name="stress-relievers" value="comedy">Taking a comedy class to make better jokes<br>
+        <p>In the past year, have you used any of these relief methods?</p>
+        <input type="checkbox" name="stressRelievers" value="option1">Exercising.<br>
+        <input type="checkbox" name="stressRelievers" value="option2">Taking supplements.<br>
+        <input type="checkbox" name="stressRelievers" value="option3">Reducing caffeine intake.<br>
+        <input type="checkbox" name="stressRelievers" value="option4">Spending time with friends and family.<br>
+        <input type="checkbox" name="stressRelievers" value="option5">Laugh.<br>
       </div>
-      <button type="submit" class="btn btn-dark">Submit</button>
+      <button type="submit" class="btn btn-dark">Result</button>
     </form>
-    <span id="dobetter">
-      <p><b>Take care of yourself :)</b></p>
+    <span id="veryHealthy">
+      <h5>You have very healthy habits and keep stress at bay.</h5>
+      <img src="img/veryhealthy.jpg" alt="veryhealthy">
+      <p><button value="Refresh Page" class="btn btn-dark" onClick="window.location.reload()">Start Over</button></p>
     </span>
-    <span id="ok">
-      <p><b>meh</b></p>
+    <span id="healthy">
+      <h5>You have healthy habits and manage stress well.</h5>
+      <img src="img/healthy.jpg" alt="healthy">
+      <p><button value="Refresh Page" class="btn btn-dark" onClick="window.location.reload()">Start Over</button></p>
     </span>
-    <span id="great">
-      <p><b>You're grrrrrrreat!</b></p>
+    <span id="neutral">
+      <h5>You experience stress at manageable levels.</h5>
+      <img src="img/neutral.jpg" alt="neutral">
+      <p><button value="Refresh Page" class="btn btn-dark" onClick="window.location.reload()">Start Over</button></p>
+    </span>
+    <span id="unhealthy">
+      <h5>You have unhealthy habits and are prone to stress.</h5>
+      <img src="img/unhealthy.jpg" alt="unhealthy">
+      <p><button value="Refresh Page" class="btn btn-dark" onClick="window.location.reload()">Start Over</button></p>
+    </span>
+    <span id="veryUnhealthy">
+      <h5>You have very unhealthy habits and don't manage stress well.</h5>
+      <img src="img/veryunhealthy.jpg" alt="veryunhealthy">
+      <p><button value="Refresh Page" class="btn btn-dark" onClick="window.location.reload()">Start Over</button></p>
     </span>
   </div>
 </body>
