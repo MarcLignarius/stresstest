@@ -1,18 +1,18 @@
-# _{Application Name}_
+# _Checkbox Practice: Stress Test_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _User answers survey about stress events, symptoms and relievers and function returns an assessment. 04/02/2019._
 
 #### By _**Marc Davies**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_User answers survey about stress events, symptoms and relievers. The answers are then tracked and recorded into arrays. A function then compares the arrays (for example: events + symptoms < relievers) and function returns an assessment based on user inputs._
 
 ## Setup/Installation Requirements
 
 * _Clone from GitHub_
 * _Open index.html_
-* _Alternatively, launch marclignarius.github.io/projectname_
+* _Alternatively, launch marclignarius.github.io/stresstest_
 
 ## Known Bugs
 
