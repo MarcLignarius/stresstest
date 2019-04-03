@@ -1,28 +1,34 @@
 $(function() {
-  $("form#health-survey").submit(function(event){
+  $("form#healthSurvey").submit(function(event){
     event.preventDefault();
     var eventsCount = [];
     var symptomsCount = [];
     var relieverCount = [];
 
-    $("input:checkbox[name=stressful-events]:checked").each(function() {
+    $("input:checkbox[name=stressfulEvents]:checked").each(function() {
       var eventsResponse = eventsCount.push($(this).val());
-      console.log("eventsResponse", eventsResponse);
     });
     $("input:checkbox[name=symptoms]:checked").each(function() {
       var symptomsResponse = symptomsCount.push($(this).val());
-        console.log("symptomsResponse", symptomsResponse);
     });
-    $("input:checkbox[name=stress-relievers]:checked").each(function() {
+    $("input:checkbox[name=stressRelievers]:checked").each(function() {
       var relieverResponse = relieverCount.push($(this).val());
-      console.log("relieverResponse", relieverResponse);
     });
-    if((eventsCount.length + symptomsCount.length) > relieverCount.length)  {
-      $("#dobetter").show();
-    } else if((eventsCount.length + symptomsCount.length) === relieverCount.length) {
-      $("#ok").show();
+    if((eventsCount.length + symptomsCount.length) > relieverCount.length && (eventsCount.length + symptomsCount.length) >= 5) {
+      $("#healthSurvey").hide();
+      $("#veryUnhealthy").show();
+    } else if((eventsCount.length + symptomsCount.length) < relieverCount.length && relieverCount.length >= 4) {
+      $("#healthSurvey").hide();
+      $("#veryHealthy").show();
+    } else if((eventsCount.length + symptomsCount.length) > relieverCount.length)  {
+      $("#healthSurvey").hide();
+      $("#unhealthy").show();
     } else if((eventsCount.length + symptomsCount.length) < relieverCount.length) {
-      $("#great").show();
-    }
+      $("#healthSurvey").hide();
+      $("#healthy").show();
+    } else if((eventsCount.length + symptomsCount.length) === relieverCount.length) {
+      $("#healthSurvey").hide();
+      $("#neutral").show();
+    };
   });
 });
