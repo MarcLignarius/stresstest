@@ -1,3 +1,9 @@
-#dobetter, #ok, #great {
+#veryHealthy, #healthy, #neutral, #unhealthy, #veryUnhealthy{
   display: none;
+}
+
+#veryHealthy img, #healthy img, #neutral img, #unhealthy img, #veryUnhealthy img {
+  width: 50%;
+  height: 50%;
+  margin-bottom: 20px;
 }
